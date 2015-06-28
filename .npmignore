@@ -1,4 +1,5 @@
 **/.*
+bower.json
 Gulpfile.js
 webpack.config.js
 README.md
