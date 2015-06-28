@@ -1,6 +1,6 @@
 {
   "name": "jquery-extends",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "jQuery Extends Plugin",
   "main": "dist/jquery.extends.js",
   "scripts": {
