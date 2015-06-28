@@ -1,0 +1,28 @@
+{
+  "name": "jquery-extends",
+  "version": "0.1.0",
+  "homepage": "https://github.com/teamscala/jquery-extends",
+  "authors": [
+    "Seok Ki Won <seok.kiwon@gmail.com>"
+  ],
+  "description": "jQuery Extends Plugin",
+  "main": "dist/jquery.extends.js",
+  "keywords": [
+    "jquery",
+    "jquery-extends"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "README.md",
+    "test",
+    "support",
+    "docs",
+    "examples",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}

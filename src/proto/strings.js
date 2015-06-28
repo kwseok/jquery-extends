@@ -1,0 +1,23 @@
+module.exports = {
+    'antStylePathToRegex': require('./strings/antStylePathToRegex'),
+    'br2nl': require('./strings/br2nl'),
+    'compareTo': require('./strings/compareTo'),
+    'contains': require('./strings/contains'),
+    'cutstring': require('./strings/cutstring'),
+    'endsWith': require('./strings/endsWith'),
+    'format': require('./strings/format'),
+    'formatVariables': require('./strings/formatVariables'),
+    'getLength': require('./strings/getLength'),
+    'grouped': require('./strings/grouped'),
+    'groupedRight': require('./strings/groupedRight'),
+    'leftPad': require('./strings/leftPad'),
+    'nl2br': require('./strings/nl2br'),
+    'quote': require('./strings/quote'),
+    'regex': require('./strings/regex'),
+    'repeat': require('./strings/repeat'),
+    'rightPad': require('./strings/rightPad'),
+    'startsWith': require('./strings/startsWith'),
+    'unquote': require('./strings/unquote'),
+    'xmlEscape': require('./strings/xmlEscape'),
+    'xmlUnescape': require('./strings/xmlUnescape')
+};

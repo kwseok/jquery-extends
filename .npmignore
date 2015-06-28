@@ -1,0 +1,8 @@
+**/.*
+README.md
+test
+support
+docs
+examples
+node_modules
+bower_components
