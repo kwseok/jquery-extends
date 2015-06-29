@@ -6,7 +6,7 @@ import './proto/index'
  * @param {string} separator
  * @param {string} [escapeChar]
  * @param {number} [limit]
- * @return {Array<String>}
+ * @return {Array<string>}
  */
 $.split = function(str, separator, escapeChar, limit) {
     if (typeof str !== 'string') {
@@ -18,7 +18,11 @@ $.split = function(str, separator, escapeChar, limit) {
     } else if (typeof escapeChar === 'number') {
         [limit, escapeChar] = [escapeChar, null]
     }
-    let limited = (i) => (0 < limit && limit <= i + 1);
+
+    function limited(i) {
+        return 0 < limit && limit <= i + 1;
+    }
+
     let parts = [];
     let i = 0;
     let s = 0;

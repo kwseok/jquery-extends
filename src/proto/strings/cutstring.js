@@ -13,22 +13,14 @@ if (!String.prototype.cutstring) {
         let argCurr = () => arguments[argIndex];
         let argShift = () => arguments[argIndex++];
 
-        if (['boolean', 'number'].contains(typeof argCurr())) {
-            checkbyte = argShift();
-        } else {
-            checkbyte = false;
-        }
+        checkbyte = ['boolean', 'number'].contains(typeof argCurr()) ? argShift() : false;
 
         if (typeof argCurr() !== 'number') {
             throw new TypeError(argCurr() + " is not a number");
         }
         maxLength = argShift();
 
-        if (typeof argCurr() === 'string') {
-            suffix = argShift();
-        } else {
-            suffix = '';
-        }
+        suffix = typeof argCurr() === 'string' ? argShift() : '';
 
         let length = this.getLength(checkbyte);
         if (!(length > maxLength)) {

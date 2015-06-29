@@ -8,10 +8,8 @@ import './proto/index'
 $.fn.serializeObject = function(options) {
     if (!$.isPlainObject(options)) {
         options = {};
-    } else {
-        if (options.except && !$.isArray(options.except)) {
-            options.except = [options.except];
-        }
+    } else if (options.except && !$.isArray(options.except)) {
+        options.except = [options.except];
     }
     let result = {};
     $.each(this.serializeArray(), function() {

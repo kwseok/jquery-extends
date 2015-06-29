@@ -1,13 +1,13 @@
 const gulp = require('gulp');
-const clean = require('gulp-clean');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const webpack = require('gulp-webpack');
+const del = require('del');
+const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
 
 gulp.task('clean', function() {
-    gulp.src('./dist', {read: false}).pipe(clean({force: true}));
+    del('dist');
 });
 
 gulp.task('default', ['clean'], function() {

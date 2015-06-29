@@ -26,6 +26,8 @@ $.fn.maxZIndex = function(excludes) {
  * @param {string|Array<HTMLElement>|jQuery<HTMLElement>} excludes
  * @return {number}
  */
-$.maxZIndex = (excludes) => $(document.body).maxZIndex(excludes);
+$.maxZIndex = function(excludes) {
+    return $(document.body).maxZIndex(excludes);
+};
 
 export default $.maxZIndex;

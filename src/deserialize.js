@@ -3,7 +3,7 @@ import './proto/index'
 import './obj'
 
 /**
- * @param {String} queryString
+ * @param {string} queryString
  * @param {Object} [options]
  * @return {Object}
  */
@@ -14,10 +14,8 @@ $.deserialize = function(queryString, options) {
     let pairs = queryString.split(/&amp;|&/i);
     if (!$.isPlainObject(options)) {
         options = {};
-    } else {
-        if (options.except && !$.isArray(options.except)) {
-            options.except = [options.except];
-        }
+    } else if (options.except && !$.isArray(options.except)) {
+        options.except = [options.except];
     }
     let o = {};
     for (let pair of pairs) {

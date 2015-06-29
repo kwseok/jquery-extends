@@ -10,11 +10,7 @@ if (!String.prototype.getLength) {
         let argCurr = () => arguments[argIndex];
         let argShift = () => arguments[argIndex++];
 
-        if (['boolean', 'number'].contains(typeof argCurr())) {
-            checkbyte = argShift();
-        } else {
-            checkbyte = false;
-        }
+        checkbyte = ['boolean', 'number'].contains(typeof argCurr()) ? argShift() : false;
         if (checkbyte === false) {
             return this.length;
         }

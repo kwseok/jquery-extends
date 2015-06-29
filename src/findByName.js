@@ -2,7 +2,7 @@ import $ from 'jquery'
 import './proto/index'
 
 /**
- * @param {String} name
+ * @param {string} name
  * @return {jQuery<HTMLElement>}
  */
 $.fn.findByName = function(name) {

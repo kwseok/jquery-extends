@@ -57,13 +57,15 @@ $.obj = {
             }
             return key;
         });
-        let isNull = (o, key) => {
+
+        function isNull(o, key) {
             try {
                 return !(key in o && (o[key] != null));
             } catch (ignored) {
                 return false;
             }
-        };
+        }
+
         let currObj = obj;
         for (let i = 0; i < keys.length; i++) {
             let key = keys[i];
@@ -114,7 +116,7 @@ $.obj = {
      * @param {boolean} [deep]
      * @param {boolean} [appendArray]
      * @param {*|Object} target
-     * @param {*|Arguments<Object>} sources
+     * @param {*|...Object} sources
      * @param {boolean} [extendIfUndefined]
      * @return {Object}
      */
@@ -134,20 +136,18 @@ $.obj = {
                     if (source.hasOwnProperty(name)) {
                         let src = target[name];
                         let copy = source[name];
-                        if (target === copy) {
-                            continue;
-                        }
+                        if (copy === target) continue;
                         let copyIsArray = false;
                         if (deep && copy && ($.isPlainObject(copy) || (copyIsArray = $.isArray(copy)))) {
                             if (!copyIsArray) {
                                 let srcIsPlainObject = false;
-                                if (src === void 0 || (srcIsPlainObject = $.isPlainObject(src)) || !extendIfUndefined) {
+                                if (src === undefined || (srcIsPlainObject = $.isPlainObject(src)) || !extendIfUndefined) {
                                     target[name] = $.obj.extend(deep, appendArray, (srcIsPlainObject ? src : {}), copy, extendIfUndefined);
                                 }
-                            } else if (src === void 0 || !extendIfUndefined) {
+                            } else if (src === undefined || !extendIfUndefined) {
                                 target[name] = $.merge((appendArray && $.isArray(src) ? src : []), $.obj.extend(deep, [], copy));
                             }
-                        } else if (copy !== void 0 && (src === void 0 || !extendIfUndefined)) {
+                        } else if (copy !== undefined && (src === undefined || !extendIfUndefined)) {
                             if (copy instanceof Date) {
                                 target[name] = new Date(copy.getTime());
                             } else if (copy instanceof RegExp) {

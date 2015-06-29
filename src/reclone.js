@@ -4,7 +4,7 @@ import './proto/index'
 /**
  * @param {boolean} dataAndEvents
  * @param {boolean} deepDataAndEvents
- * @return {jQuery}
+ * @return {jQuery<HTMLElement>}
  */
 $.fn.reclone = function(dataAndEvents, deepDataAndEvents) {
     return this.map(function() {
