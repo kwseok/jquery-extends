@@ -1,1 +1,1 @@
-# jquery-extends
+# jQuery Extends Plugin
