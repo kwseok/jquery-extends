@@ -11,7 +11,11 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /.js$/, loader: 'babel-loader'}
+            {
+                test: /.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel-loader?optional=runtime'
+            }
             //{test: /\.coffee$/, loader: 'coffee-loader'}
         ]
     },
@@ -26,8 +30,8 @@ module.exports = {
     devtool: '#inline-source-map',
     plugins: [
         new webpack.ProvidePlugin({
-            window: './vars/window',
-            document: './vars/document'
+            window: __dirname + '/src/vars/window',
+            document: __dirname + '/src/vars/document'
         })
     ]
 };
