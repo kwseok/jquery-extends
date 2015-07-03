@@ -1,4 +1,4 @@
-# jQuery Extends Plugin
+# jQuery Extends
 
 ## Example use
 

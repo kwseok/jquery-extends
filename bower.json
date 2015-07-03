@@ -5,7 +5,7 @@
   "authors": [
     "Seok Ki Won <seok.kiwon@gmail.com>"
   ],
-  "description": "jQuery Extends Plugin",
+  "description": "jQuery Extends",
   "main": "dist/jquery.extends.js",
   "keywords": [
     "jquery",

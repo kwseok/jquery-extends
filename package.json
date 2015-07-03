@@ -1,7 +1,7 @@
 {
   "name": "jquery-extends",
   "version": "0.1.3",
-  "description": "jQuery Extends Plugin",
+  "description": "jQuery Extends",
   "main": "dist/jquery.extends.js",
   "scripts": {
     "build": "npm install && gulp",
