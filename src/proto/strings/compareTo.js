@@ -1,15 +1,8 @@
 if (!String.prototype.compareTo) {
     String.prototype.compareTo = function(str) {
-        switch (false) {
-        case !(str == null):
-            return 1;
-        case !(this > str):
-            return 1;
-        case !(this < str):
-            return -1;
-        default:
-            return 0;
-        }
+        if (str == null || this > str) return 1;
+        if (this < str) return -1;
+        return 0;
     };
 }
 

@@ -7,9 +7,7 @@ if (!String.prototype.groupedRight) {
         if (!(size > 1)) {
             throw new RangeError('Invalid size value');
         }
-        if (typeof size !== 'number') {
-            size = parseInt(size)
-        }
+        if (typeof size !== 'number') size = parseInt(size)
         let results = [];
         for (let i = this.length; i > 0; i -= size) {
             results.push(this.slice(Math.max(0, i - size), i));

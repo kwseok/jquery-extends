@@ -3,7 +3,6 @@ if (!Array.prototype.remove) {
         for (let i = this.length - 1; i >= 0; --i) {
             if (this[i] === a) {
                 this.splice(i, 1);
-                break;
             }
         }
         return this;

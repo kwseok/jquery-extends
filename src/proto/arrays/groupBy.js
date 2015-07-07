@@ -13,11 +13,10 @@ if (!Array.prototype.groupBy) {
             let value = this[i];
             let key = callback.call(context || this, value, i, this);
             if (key) {
-                if (key in result) {
+                if (key in result)
                     result[key].push(value);
-                } else {
+                else
                     result[key] = [value];
-                }
             }
         }
         return result;

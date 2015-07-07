@@ -3,11 +3,10 @@ import './indexOf'
 if (!Array.prototype.include) {
     Array.prototype.include = function(a) {
         let i = this.indexOf(a);
-        if (i > -1) {
+        if (i > -1)
             this[i] = a;
-        } else {
+        else
             this.push(a);
-        }
         return this;
     };
 }

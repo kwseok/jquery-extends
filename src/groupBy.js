@@ -15,9 +15,9 @@ $.fn.groupBy = function(callback, context) {
         let elem = this[i];
         let key = callback.call(context || elem, elem, i, this);
         if (key !== undefined) {
-            if (!(key in result)) {
+            if (!(key in result))
                 result[key] = $([]);
-            }
+
             result[key].push(this[i]);
         }
     }

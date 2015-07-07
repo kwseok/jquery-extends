@@ -6,7 +6,7 @@ if (!Array.range) {
      * @static
      * @return {Array}
      */
-    Array.range = function(from, to, step) {
+    Array.range = function(from, to, step = 1) {
         let range = [];
         let isNumber = typeof from === 'number' && typeof to === 'number';
         let begin = isNumber ? from : from.toString().charCodeAt(0);

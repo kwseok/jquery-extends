@@ -1,23 +1,21 @@
-module.exports = {
-    'antStylePathToRegex': require('./strings/antStylePathToRegex'),
-    'br2nl': require('./strings/br2nl'),
-    'compareTo': require('./strings/compareTo'),
-    'contains': require('./strings/contains'),
-    'cutstring': require('./strings/cutstring'),
-    'endsWith': require('./strings/endsWith'),
-    'format': require('./strings/format'),
-    'formatVariables': require('./strings/formatVariables'),
-    'getLength': require('./strings/getLength'),
-    'grouped': require('./strings/grouped'),
-    'groupedRight': require('./strings/groupedRight'),
-    'leftPad': require('./strings/leftPad'),
-    'nl2br': require('./strings/nl2br'),
-    'quote': require('./strings/quote'),
-    'regex': require('./strings/regex'),
-    'repeat': require('./strings/repeat'),
-    'rightPad': require('./strings/rightPad'),
-    'startsWith': require('./strings/startsWith'),
-    'unquote': require('./strings/unquote'),
-    'xmlEscape': require('./strings/xmlEscape'),
-    'xmlUnescape': require('./strings/xmlUnescape')
-};
+export { default as antStylePathToRegex } from './strings/antStylePathToRegex'
+export { default as br2nl } from './strings/br2nl'
+export { default as compareTo } from './strings/compareTo'
+export { default as contains } from './strings/contains'
+export { default as cutstring } from './strings/cutstring'
+export { default as endsWith } from './strings/endsWith'
+export { default as format } from './strings/format'
+export { default as formatVariables } from './strings/formatVariables'
+export { default as getLength } from './strings/getLength'
+export { default as grouped } from './strings/grouped'
+export { default as groupedRight } from './strings/groupedRight'
+export { default as leftPad } from './strings/leftPad'
+export { default as nl2br } from './strings/nl2br'
+export { default as quote } from './strings/quote'
+export { default as regex } from './strings/regex'
+export { default as repeat } from './strings/repeat'
+export { default as rightPad } from './strings/rightPad'
+export { default as startsWith } from './strings/startsWith'
+export { default as unquote } from './strings/unquote'
+export { default as xmlEscape } from './strings/xmlEscape'
+export { default as xmlUnescape } from './strings/xmlUnescape'

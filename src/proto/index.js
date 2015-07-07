@@ -1,5 +1,3 @@
-module.exports = {
-    arrays: require('./arrays'),
-    regexps: require('./regexps'),
-    strings: require('./strings')
-};
+export { default as arrays } from './arrays'
+export { default as regexps } from './regexps'
+export { default as strings } from './strings'

@@ -13,11 +13,10 @@ $.split = function(str, separator, escapeChar, limit) {
         throw new TypeError(str + ' is not a string');
     }
     str = str.toString();
-    if (typeof separator === 'number') {
+    if (typeof separator === 'number')
         [limit, separator, escapeChar] = [separator, null, null]
-    } else if (typeof escapeChar === 'number') {
+    else if (typeof escapeChar === 'number')
         [limit, escapeChar] = [escapeChar, null]
-    }
 
     function limited(i) {
         return 0 < limit && limit <= i + 1;
@@ -33,19 +32,15 @@ $.split = function(str, separator, escapeChar, limit) {
         if (escapeChar && part.slice(-1) === escapeChar) {
             part = part.slice(0, -1);
             escaped = part.slice(-1) !== escapeChar;
-            if (escaped) {
-                part += separator;
-            }
+            if (escaped) part += separator;
         }
         parts[i] = (parts[i] || '') + part;
         s = p + 1;
-        if (!escaped) {
-            i++;
-        }
+        if (!escaped) i++;
     }
-    if (s <= str.length) {
+    if (s <= str.length)
         parts[i] = (parts[i] || '') + str.slice(s);
-    }
+
     return parts;
 };
 

@@ -13,16 +13,12 @@ $.some = function(items, callback, context) {
     }
     if ($.isArray(items)) {
         for (let i = 0; i < items.length; i++) {
-            if (callback.call(context || items, items[i], i, items)) {
-                return true;
-            }
+            if (callback.call(context || items, items[i], i, items)) return true;
         }
     } else if ($.isPlainObject(items)) {
         for (let key in items) {
             if (items.hasOwnProperty(key)) {
-                if (callback.call(context || items, items[key], key, items)) {
-                    return true;
-                }
+                if (callback.call(context || items, items[key], key, items)) return true;
             }
         }
     } else {

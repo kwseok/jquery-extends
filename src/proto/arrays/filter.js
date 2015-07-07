@@ -8,9 +8,7 @@ if (!Array.prototype.filter) {
      */
     Array.prototype.filter = function(callback, context) {
         return this.flatMap((a, i) => {
-            if (callback.call(context || this, a, i, this)) {
-                return a;
-            }
+            if (callback.call(context || this, a, i, this)) return a;
         });
     };
 }

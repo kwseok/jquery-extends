@@ -1,22 +1,20 @@
-module.exports = {
-    contains: require('./arrays/contains'),
-    every: require('./arrays/every'),
-    filter: require('./arrays/filter'),
-    first: require('./arrays/first'),
-    flatMap: require('./arrays/flatMap'),
-    groupBy: require('./arrays/groupBy'),
-    grouped: require('./arrays/grouped'),
-    groupedRight: require('./arrays/groupedRight'),
-    include: require('./arrays/include'),
-    indexOf: require('./arrays/indexOf'),
-    isArray: require('./arrays/isArray'),
-    joinPaths: require('./arrays/joinPaths'),
-    last: require('./arrays/last'),
-    map: require('./arrays/map'),
-    max: require('./arrays/max'),
-    min: require('./arrays/min'),
-    range: require('./arrays/range'),
-    reduce: require('./arrays/reduce'),
-    remove: require('./arrays/remove'),
-    some: require('./arrays/some')
-};
+export { default as contains } from './arrays/contains'
+export { default as every } from './arrays/every'
+export { default as filter } from './arrays/filter'
+export { default as first } from './arrays/first'
+export { default as flatMap } from './arrays/flatMap'
+export { default as groupBy } from './arrays/groupBy'
+export { default as grouped } from './arrays/grouped'
+export { default as groupedRight } from './arrays/groupedRight'
+export { default as include } from './arrays/include'
+export { default as indexOf } from './arrays/indexOf'
+export { default as isArray } from './arrays/isArray'
+export { default as joinPaths } from './arrays/joinPaths'
+export { default as last } from './arrays/last'
+export { default as map } from './arrays/map'
+export { default as max } from './arrays/max'
+export { default as min } from './arrays/min'
+export { default as range } from './arrays/range'
+export { default as reduce } from './arrays/reduce'
+export { default as remove } from './arrays/remove'
+export { default as some } from './arrays/some'

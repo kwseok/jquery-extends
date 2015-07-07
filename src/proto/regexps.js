@@ -1,3 +1,1 @@
-module.exports = {
-    escape: require('./regexps/escape')
-};
+export { default as escape } from './regexps/escape'

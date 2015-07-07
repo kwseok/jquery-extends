@@ -5,9 +5,7 @@ if (!Array.prototype.indexOf) {
      */
     Array.prototype.indexOf = function(item) {
         for (let i = 0; i < this.length; i++) {
-            if (i in this && this[i] === item) {
-                return i;
-            }
+            if (i in this && this[i] === item) return i;
         }
         return -1;
     };

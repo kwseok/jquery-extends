@@ -1,4 +1,3 @@
-import jQuery from 'jquery'
 import './proto/index'
 import './deserialize'
 import './findByName'
@@ -15,5 +14,4 @@ import './some'
 import './split'
 import './supportsInputType'
 import './xmlToString'
-
-export default jQuery;
+export { default as default } from 'jquery'

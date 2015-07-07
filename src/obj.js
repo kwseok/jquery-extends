@@ -11,21 +11,15 @@ $.obj = {
      * @return {*}
      */
     get: function(obj, key, defaultValue) {
-        if (obj == null) {
-            return defaultValue;
-        }
-        if (!key) {
-            return obj;
-        }
+        if (obj == null) return defaultValue;
+        if (!key) return obj;
         let keyFragments = $.split(key, '.', '/');
         for (let keyFragment of keyFragments) {
-            if ((obj = obj[keyFragment]) == null) {
-                return defaultValue;
-            }
+            if ((obj = obj[keyFragment]) == null) return defaultValue;
         }
-        if ($.isArray(defaultValue) && !$.isArray(obj)) {
+        if ($.isArray(defaultValue) && !$.isArray(obj))
             obj = $.makeArray(obj);
-        }
+
         return obj;
     },
 
@@ -70,17 +64,15 @@ $.obj = {
         for (let i = 0; i < keys.length; i++) {
             let key = keys[i];
             if (i === keys.length - 1) {
-                if (!appendArray || isNull(currObj, key)) {
+                if (!appendArray || isNull(currObj, key))
                     currObj[key] = value;
-                } else if ($.isArray(currObj[key])) {
+                else if ($.isArray(currObj[key]))
                     currObj[key].push(value);
-                } else {
+                else
                     currObj[key] = [currObj[key], value];
-                }
             } else if (isNull(currObj, key)) {
-                if (!keys[i + 1]) {
+                if (!keys[i + 1])
                     keys[i + 1] = '0';
-                }
                 currObj[key] = /^\d+$/.test(keys[i + 1]) ? [] : {};
             } else if (typeof keys[i + 1] === 'undefined') {
                 keys[i + 1] = $.isArray(currObj[key]) ? currObj[key].length + '' : '';
@@ -95,18 +87,15 @@ $.obj = {
      * @return {Object}
      */
     generalize: function(obj) {
-        if (!$.isPlainObject(obj)) {
-            return obj;
-        }
+        if (!$.isPlainObject(obj)) return obj;
         let result = {};
         for (let key in obj) {
             if (obj.hasOwnProperty(key)) {
                 let value = obj[key];
-                if (key.contains('.') || /\[(\w+)?\]/.test(key)) {
+                if (key.contains('.') || /\[(\w+)?\]/.test(key))
                     $.obj.set(true, result, key, value);
-                } else {
+                else
                     result[key] = value;
-                }
             }
         }
         return result;
@@ -126,9 +115,8 @@ $.obj = {
         appendArray = typeof args.first() === 'boolean' ? args.shift() : false;
         extendIfUndefined = typeof args.last() === 'boolean' ? args.pop() : false;
         target = args.length === 1 ? {} : args.shift() || {};
-        if (typeof target !== 'object' && !$.isFunction(target)) {
-            target = {};
-        }
+        if (typeof target !== 'object' && !$.isFunction(target)) target = {};
+
         sources = args;
         for (let source of sources) {
             if (source != null) {
@@ -152,18 +140,10 @@ $.obj = {
                                 target[name] = new Date(copy.getTime());
                             } else if (copy instanceof RegExp) {
                                 let flags = '';
-                                if (copy.global != null) {
-                                    flags += 'g';
-                                }
-                                if (copy.ignoreCase != null) {
-                                    flags += 'i';
-                                }
-                                if (copy.multiline != null) {
-                                    flags += 'm';
-                                }
-                                if (copy.sticky != null) {
-                                    flags += 'y';
-                                }
+                                if (copy.global != null) flags += 'g';
+                                if (copy.ignoreCase != null) flags += 'i';
+                                if (copy.multiline != null) flags += 'm';
+                                if (copy.sticky != null) flags += 'y';
                                 target[name] = new RegExp(copy.source, flags);
                             } else {
                                 target[name] = copy;
@@ -195,9 +175,8 @@ $.obj = {
     empty: function(obj) {
         if ($.isPlainObject(obj)) {
             for (let key in obj) {
-                if (obj.hasOwnProperty(key)) {
+                if (obj.hasOwnProperty(key))
                     delete obj[key];
-                }
             }
         }
         return obj;
@@ -207,9 +186,8 @@ $.obj = {
 for (let key in $.obj) {
     let shortKey = key + 'Object';
     if (!(shortKey in $)) {
-        if ($.obj.hasOwnProperty(key)) {
+        if ($.obj.hasOwnProperty(key))
             $[shortKey] = $.obj[key];
-        }
     }
 }
 

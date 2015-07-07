@@ -10,12 +10,8 @@ if (!String.prototype.rightPad) {
         if (typeof length !== 'number') {
             throw new TypeError(length + ' is not a number');
         }
-        if (!fillChar) {
-            fillChar = ' ';
-        }
-        if (this.length >= length) {
-            return this.toString();
-        }
+        if (!fillChar) fillChar = ' ';
+        if (this.length >= length) return this.toString();
         return this.toString() + fillChar.repeat(length - this.length);
     };
 }

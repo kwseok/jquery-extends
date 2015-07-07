@@ -7,11 +7,8 @@ if (!String.prototype.br2nl) {
      */
     String.prototype.br2nl = function(xmlUnescape) {
         let result = this.replace(/(<br>|<br\/>)/g, '\n');
-        if (xmlUnescape) {
-            return result.xmlUnescape();
-        } else {
-            return result;
-        }
+        if (xmlUnescape) return result.xmlUnescape();
+        return result;
     };
 }
 

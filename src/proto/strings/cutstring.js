@@ -23,9 +23,7 @@ if (!String.prototype.cutstring) {
         suffix = typeof argCurr() === 'string' ? argShift() : '';
 
         let length = this.getLength(checkbyte);
-        if (!(length > maxLength)) {
-            return this;
-        }
+        if (!(length > maxLength)) return this;
 
         let suffixLength = suffix.getLength(checkbyte);
         if (suffixLength > maxLength) {
@@ -36,9 +34,7 @@ if (!String.prototype.cutstring) {
         for (let i = 0; i < this.length; i++) {
             let c = this.charAt(i);
             let l = c.getLength(checkbyte);
-            if (checkedLength + l > maxLength - suffixLength) {
-                break;
-            }
+            if (checkedLength + l > maxLength - suffixLength) break;
             checkedLength += l;
             resultString += c;
         }
