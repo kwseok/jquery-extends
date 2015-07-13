@@ -31,7 +31,9 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             window: __dirname + '/src/vars/window',
-            document: __dirname + '/src/vars/document'
+            document: __dirname + '/src/vars/document',
+            $: __dirname + '/src/vars/jquery',
+            jQuery: __dirname + '/src/vars/jquery'
         })
     ]
 };

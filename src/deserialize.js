@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import './proto/index'
 import './obj'
 

@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import './proto/index'
 
 /**
@@ -29,4 +28,4 @@ $.maxZIndex = function(excludes) {
     return $(document.body).maxZIndex(excludes);
 };
 
-export default $.maxZIndex;
+export default $.fn.maxZIndex;

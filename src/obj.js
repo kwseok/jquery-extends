@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import './proto/index'
 import './split'
 
@@ -186,8 +185,7 @@ $.obj = {
 for (let key in $.obj) {
     let shortKey = key + 'Object';
     if (!(shortKey in $)) {
-        if ($.obj.hasOwnProperty(key))
-            $[shortKey] = $.obj[key];
+        if ($.obj.hasOwnProperty(key)) $[shortKey] = $.obj[key];
     }
 }
 

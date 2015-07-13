@@ -14,4 +14,4 @@ import './some'
 import './split'
 import './supportsInputType'
 import './xmlToString'
-export { default as default } from 'jquery'
+export default $;
