@@ -16,7 +16,7 @@
     "jquery",
     "jquery-extends"
   ],
-  "author": "Seok Ki Won <seok.kiwon@gmail.com>",
+  "author": "Kiwon Seok",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/teamscala/jquery-extends/issues"
