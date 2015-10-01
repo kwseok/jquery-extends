@@ -1,4 +1,4 @@
-# jQuery Extends [![Build Status](https://travis-ci.org/stonexx/jquery-extends.svg?branch=master)](https://travis-ci.org/stonexx/jquery-extends)
+# jQuery extension plugins [![Build Status](https://travis-ci.org/stonexx/jquery-extends.svg?branch=master)](https://travis-ci.org/stonexx/jquery-extends)
 
 ## Example use
 
