@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teamscala/jquery-extends.git"
+    "url": "git+https://github.com/stonexx/jquery-extends.git"
   },
   "keywords": [
     "jquery",
@@ -19,9 +19,9 @@
   "author": "Kiwon Seok",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/teamscala/jquery-extends/issues"
+    "url": "https://github.com/stonexx/jquery-extends/issues"
   },
-  "homepage": "https://github.com/teamscala/jquery-extends#readme",
+  "homepage": "https://github.com/stonexx/jquery-extends#readme",
   "dependencies": {
     "jquery": "^2.1.4"
   },
