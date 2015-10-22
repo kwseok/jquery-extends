@@ -1,1 +1,3 @@
-module.exports = require('./window').document;
+import window from './window'
+
+module.exports = window.document;
