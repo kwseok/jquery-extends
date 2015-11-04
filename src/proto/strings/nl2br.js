@@ -1,3 +1,5 @@
+'use strict';
+
 import './xmlEscape'
 
 if (!String.prototype.nl2br) {

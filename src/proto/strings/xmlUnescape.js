@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.xmlUnescape) {
     String.prototype.xmlUnescape = function() {
         return this.replace(/(&lt;|&gt;|&#34;|&#39;|&amp;)/g, ($1) => {

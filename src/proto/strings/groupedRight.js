@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.groupedRight) {
     /**
      * @param {number} size

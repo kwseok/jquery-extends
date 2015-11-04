@@ -1,3 +1,5 @@
+'use strict';
+
 import '../arrays/isArray'
 
 if (!String.prototype.format) {

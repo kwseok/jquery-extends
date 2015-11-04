@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.prototype.remove) {
     Array.prototype.remove = function(a) {
         for (let i = this.length - 1; i >= 0; --i) {

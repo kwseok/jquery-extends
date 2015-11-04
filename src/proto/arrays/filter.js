@@ -1,3 +1,5 @@
+'use strict';
+
 import './flatMap'
 
 if (!Array.prototype.filter) {

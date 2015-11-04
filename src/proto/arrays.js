@@ -1,3 +1,5 @@
+'use strict';
+
 export { default as contains } from './arrays/contains'
 export { default as every } from './arrays/every'
 export { default as filter } from './arrays/filter'

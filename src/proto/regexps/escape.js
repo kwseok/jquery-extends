@@ -1,3 +1,5 @@
+'use strict';
+
 if (!RegExp.escape) {
     /**
      * @param {String} text

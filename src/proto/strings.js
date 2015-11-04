@@ -1,3 +1,5 @@
+'use strict';
+
 export { default as antStylePathToRegex } from './strings/antStylePathToRegex'
 export { default as br2nl } from './strings/br2nl'
 export { default as compareTo } from './strings/compareTo'

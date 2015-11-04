@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.compareTo) {
     String.prototype.compareTo = function(str) {
         if (str == null || this > str) return 1;

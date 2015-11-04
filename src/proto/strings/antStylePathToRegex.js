@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.antStylePathToRegex) {
     /**
      * @return {RegExp}

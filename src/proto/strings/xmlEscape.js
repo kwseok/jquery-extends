@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.xmlEscape) {
     String.prototype.xmlEscape = function() {
         return this.replace(/(<|>|"|'|&)/g, ($1) => {

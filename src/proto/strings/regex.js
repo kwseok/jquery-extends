@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.regex) {
     /**
      * @param {string} flags

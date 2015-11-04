@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.prototype.groupedRight) {
     /**
      * @param {number} size

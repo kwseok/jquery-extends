@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.prototype.reduce) {
     /**
      * @param {Function} callback

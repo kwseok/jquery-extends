@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.repeat) {
     /**
      * @param {number} count

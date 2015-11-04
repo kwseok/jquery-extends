@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.prototype.every) {
     /**
      * @param {Function} callback

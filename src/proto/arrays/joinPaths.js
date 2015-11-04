@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.prototype.joinPaths) {
     Array.prototype.joinPaths = function() {
         let path = '';

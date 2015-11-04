@@ -1,3 +1,5 @@
+'use strict';
+
 import './repeat'
 
 if (!String.prototype.leftPad) {

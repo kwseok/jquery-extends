@@ -1,3 +1,5 @@
+'use strict';
+
 import './isArray'
 
 if (!Array.prototype.flatMap) {

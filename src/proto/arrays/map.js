@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.prototype.map) {
     /**
      * @param {Function} callback

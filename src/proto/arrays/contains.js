@@ -1,3 +1,5 @@
+'use strict';
+
 import './indexOf'
 
 if (!Array.prototype.contains) {

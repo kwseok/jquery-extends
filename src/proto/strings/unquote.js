@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.unquote) {
     String.prototype.unquote = function() {
         if (this.length >= 2 &&

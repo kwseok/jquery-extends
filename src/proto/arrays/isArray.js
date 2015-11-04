@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.isArray) {
     /**
      * @param {*} obj

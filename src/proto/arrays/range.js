@@ -1,3 +1,5 @@
+'use strict';
+
 if (!Array.range) {
     /**
      * @param {number|string} from

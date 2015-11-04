@@ -1,3 +1,5 @@
+'use strict';
+
 import './reduce'
 
 if (!Array.prototype.max) {

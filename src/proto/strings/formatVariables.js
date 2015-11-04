@@ -1,3 +1,5 @@
+'use strict';
+
 if (!String.prototype.formatVariables) {
     /**
      * @param {*} arguments

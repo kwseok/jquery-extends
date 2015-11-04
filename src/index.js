@@ -1,3 +1,5 @@
+'use strict';
+
 import './proto/index'
 import './deserialize'
 import './findByName'
