@@ -5,7 +5,7 @@
     "Kiwon Seok"
   ],
   "description": "jQuery extension plugins",
-  "main": "dist/jquery.extends.js",
+  "main": "dist/jquery-extends.js",
   "keywords": [
     "jquery",
     "jquery-extends"
