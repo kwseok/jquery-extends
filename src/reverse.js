@@ -1,5 +1,5 @@
 'use strict';
 
-import './proto/index'
+import 'proto.js'
 
 export default $.fn.reverse = Array.prototype.reverse;

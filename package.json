@@ -1,6 +1,6 @@
 {
   "name": "jquery-extends",
-  "version": "0.1.6-SNAPSHOT",
+  "version": "0.1.6",
   "description": "jQuery extension plugins",
   "main": "dist/jquery-extends.js",
   "scripts": {
@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/stonexx/jquery-extends#readme",
   "dependencies": {
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "proto.js": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",

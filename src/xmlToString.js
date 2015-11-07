@@ -1,6 +1,6 @@
 'use strict';
 
-import './proto/index'
+import 'proto.js'
 
 /**
  * @param {XML} xmlNode the xml node.

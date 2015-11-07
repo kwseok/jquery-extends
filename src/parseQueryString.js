@@ -1,6 +1,6 @@
 'use strict';
 
-import './proto/index'
+import 'proto.js'
 import './obj'
 
 /**
@@ -8,7 +8,7 @@ import './obj'
  * @param {Object} [options]
  * @return {Object}
  */
-$.deserialize = function(queryString, options) {
+$.parseQueryString = function(queryString, options) {
     if (typeof queryString !== 'string' || queryString === '') {
         return {};
     }
@@ -28,4 +28,4 @@ $.deserialize = function(queryString, options) {
     return o;
 };
 
-export default $.deserialize;
+export default $.parseQueryString;
