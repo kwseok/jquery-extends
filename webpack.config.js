@@ -20,14 +20,6 @@ module.exports = {
         ]
     },
     externals: {
-        /*
-        'proto.js': {
-            root: false,
-            commonjs: "proto.js",
-            commonjs2: "proto.js",
-            amd: "proto.js"
-        },
-        */
         jquery: {
             root: "jQuery",
             commonjs: "jquery",
