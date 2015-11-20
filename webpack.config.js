@@ -8,6 +8,7 @@ module.exports = {
         sourceMapFilename: 'jquery-extends.js.map',
         libraryTarget: 'umd',
         library: 'jQuery'
+        //umdNamedDefine: true
     },
     module: {
         loaders: [

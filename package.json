@@ -1,6 +1,6 @@
 {
   "name": "jquery-extends",
-  "version": "0.1.8-SNAPSHOT",
+  "version": "0.1.8",
   "description": "jQuery extension plugins",
   "main": "dist/jquery-extends.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.4.2",
     "node-libs-browser": "^0.5.3",
-    "proto.js": "^0.1.0",
+    "proto.js": "^0.1.1",
     "webpack": "^1.12.2",
     "webpack-stream": "^2.1.1"
   }

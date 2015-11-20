@@ -28,6 +28,6 @@
     "jquery": "^2.1.4"
   },
   "devDependencies": {
-    "proto.js": "~0.1.0"
+    "proto.js": "~0.1.1"
   }
 }
