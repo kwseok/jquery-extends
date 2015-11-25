@@ -176,8 +176,7 @@ $.obj = {
     empty: function(obj) {
         if ($.isPlainObject(obj)) {
             for (let key in obj) {
-                if (obj.hasOwnProperty(key))
-                    delete obj[key];
+                if (obj.hasOwnProperty(key)) delete obj[key];
             }
         }
         return obj;

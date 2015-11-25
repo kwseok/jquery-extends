@@ -39,8 +39,7 @@ $.split = function(str, separator, escapeChar, limit) {
         s = p + 1;
         if (!escaped) i++;
     }
-    if (s <= str.length)
-        parts[i] = (parts[i] || '') + str.slice(s);
+    if (s <= str.length) parts[i] = (parts[i] || '') + str.slice(s);
 
     return parts;
 };

@@ -13,8 +13,7 @@ $.fn.maxZIndex = function(excludes) {
             let $this = $(this);
             if (['absolute', 'relative', 'fixed'].contains($this.css('position'))) {
                 let value = parseInt($this.css('zIndex'));
-                if (!isNaN(value) && value > zIndex)
-                    zIndex = value;
+                if (!isNaN(value) && value > zIndex) zIndex = value;
             }
         }
     });

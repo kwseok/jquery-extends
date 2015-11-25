@@ -15,11 +15,11 @@ $.fn.groupBy = function(callback, context) {
     for (let i = 0; i < this.length; i++) {
         let elem = this[i];
         let key = callback.call(context || elem, elem, i, this);
-        if (key !== undefined) {
-            if (!(key in result))
-                result[key] = $([]);
-
-            result[key].push(this[i]);
+        if (key != null) {
+            if (key in result)
+                result[key].push(elem);
+            else
+                result[key] = $(elem);
         }
     }
     return result;

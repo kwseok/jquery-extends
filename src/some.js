@@ -16,15 +16,16 @@ $.some = function(items, callback, context) {
         for (let i = 0; i < items.length; i++) {
             if (callback.call(context || items, items[i], i, items)) return true;
         }
-    } else if ($.isPlainObject(items)) {
+    }
+    else if ($.isPlainObject(items)) {
         for (let key in items) {
             if (items.hasOwnProperty(key)) {
                 if (callback.call(context || items, items[key], key, items)) return true;
             }
         }
-    } else {
-        throw new TypeError(items + " is not array or plain object");
     }
+    else throw new TypeError(items + " is not array or plain object");
+
     return false;
 };
 

@@ -19,9 +19,8 @@ $.fn.serializeObject = function(options) {
                     result[this.name] = [result[this.name], this.value];
                 else
                     result[this.name].push(this.value);
-            } else {
-                result[this.name] = this.value;
             }
+            else result[this.name] = this.value;
         }
     });
     return result;
