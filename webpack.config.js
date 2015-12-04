@@ -21,7 +21,6 @@ module.exports = {
                     plugins: ['transform-runtime']
                 } 
             }
-            //{test: /\.coffee$/, loader: 'coffee-loader'}
         ]
     },
     externals: {
