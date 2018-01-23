@@ -1,22 +1,27 @@
+const path = require('path')
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
+const rootDir = __dirname
+const srcDir = path.resolve(rootDir, 'src')
+const distDir = path.resolve(rootDir, 'dist')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: path.resolve(srcDir, 'index.js'),
     output: {
+        path: distDir,
         filename: 'jquery-extends.js',
-        minifyFilename: 'jquery-extends.min.js',
-        sourceMapFilename: 'jquery-extends.js.map',
         libraryTarget: 'umd',
         library: 'jQuery'
         //umdNamedDefine: true
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /.js$/,
+                loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/,
-                loader: 'babel',
-                query: {
+                options: {
                     presets: ['es2015'],
                     plugins: ['transform-runtime']
                 } 
@@ -25,19 +30,22 @@ module.exports = {
     },
     externals: {
         jquery: {
-            root: "jQuery",
-            commonjs: "jquery",
-            commonjs2: "jquery",
-            amd: "jquery"
+            root: 'jQuery',
+            commonjs: 'jquery',
+            commonjs2: 'jquery',
+            amd: 'jquery',
         }
     },
     devtool: '#inline-source-map',
     plugins: [
         new webpack.ProvidePlugin({
-            window: __dirname + '/src/vars/window',
-            document: __dirname + '/src/vars/document',
-            $: __dirname + '/src/vars/jquery',
-            jQuery: __dirname + '/src/vars/jquery'
-        })
-    ]
+            window: path.resolve(srcDir, 'vars/window'),
+            document: path.resolve(srcDir, 'vars/document'),
+            $: path.resolve(srcDir, 'vars/jquery'),
+            jQuery: path.resolve(srcDir, 'vars/jquery')
+        }),
+        new UglifyJsPlugin({
+            sourceMap: true,
+        }),
+    ],
 };
