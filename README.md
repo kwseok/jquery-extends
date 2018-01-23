@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="./dist/jquery-extends.js"></script>
 </head>
 <body>
