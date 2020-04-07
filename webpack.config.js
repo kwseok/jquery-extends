@@ -39,8 +39,8 @@ module.exports = {
     devtool: '#inline-source-map',
     plugins: [
         new webpack.ProvidePlugin({
-            window: path.resolve(srcDir, 'vars/window'),
-            document: path.resolve(srcDir, 'vars/document'),
+            window: [path.resolve(srcDir, 'vars/window'), 'default'],
+            document: [path.resolve(srcDir, 'vars/document'), 'default'],
             $: [path.resolve(srcDir, 'vars/jquery'), 'default'],
             jQuery: [path.resolve(srcDir, 'vars/jquery'), 'default']
         }),
