@@ -22,8 +22,8 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/,
                 options: {
-                    presets: ['es2015'],
-                    plugins: ['transform-runtime']
+                    presets: ['@babel/preset-env'],
+                    plugins: ['@babel/plugin-transform-runtime']
                 } 
             }
         ]
@@ -41,8 +41,8 @@ module.exports = {
         new webpack.ProvidePlugin({
             window: path.resolve(srcDir, 'vars/window'),
             document: path.resolve(srcDir, 'vars/document'),
-            $: path.resolve(srcDir, 'vars/jquery'),
-            jQuery: path.resolve(srcDir, 'vars/jquery')
+            $: [path.resolve(srcDir, 'vars/jquery'), 'default'],
+            jQuery: [path.resolve(srcDir, 'vars/jquery'), 'default']
         }),
         new UglifyJsPlugin({
             sourceMap: true,

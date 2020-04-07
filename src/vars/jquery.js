@@ -6,4 +6,4 @@ if (!$) {
     throw new Error("jQuery.extends requires a jQuery");
 }
 
-module.exports = $;
+export default $;

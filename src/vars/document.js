@@ -2,4 +2,4 @@
 
 import window from './window'
 
-module.exports = window.document;
+export default window.document;
